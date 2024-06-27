@@ -16,12 +16,12 @@ const sideBarLinks = [
     },
     {
         imageurl:"/recordings.svg",
-        route:"/recordings",
+        route:"/recording",
         label:"Recordings",
     },
     {
         imageurl:"/add-personal.svg",
-        route:"/presonal",
+        route:"/personal",
         label:"Personal Room",
     },
 ]
