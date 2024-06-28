@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import MobileNav from './MobileNav'
+import { UserButton } from '@clerk/nextjs'
 const Navbar = () => {
   return (
     <div className='gap-4 w-full flex flex-row items-center justify-between p-4 bg-dark-1 h-[3.5rem]'>
@@ -13,6 +14,9 @@ const Navbar = () => {
         className=' max-sm:size-10'
         />
         <h1 className=' text-2xl font-bold text-white max-sm:hidden'>Zuum</h1>
+      </div>
+      <div>
+        <UserButton/>
       </div>
       <div className=' sm:hidden'>
         <MobileNav/>
