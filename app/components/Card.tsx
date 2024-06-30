@@ -6,7 +6,7 @@ interface props {
     title: string;
     description: string;
     handleClick: any;
-    color:any;
+    color:string;
 }
 const Card = ({img,title,description,handleClick,color}:props) => {
   return (
