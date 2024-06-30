@@ -23,7 +23,7 @@ const Sidebar = () => {
               width={24}
               height={24}
               />
-              <h1 className=' text-2xl font-semibold text-white'>{link.label}</h1>
+              <h1 className=' text-xl font-medium text-white'>{link.label}</h1>
             </Link>
           )
         })}
