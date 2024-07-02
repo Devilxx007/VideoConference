@@ -1,4 +1,4 @@
-import MeetingCards from '@/app/components/MeetingCards';
+import MeetingCards from '@/components/MeetingCards';
 import React from 'react'
 
 const Home = () => {
