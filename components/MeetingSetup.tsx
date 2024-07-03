@@ -2,8 +2,9 @@
 import { useGetCallById } from '@/hooks/useGetCallById'
 import { DeviceSettings, VideoPreview, useCall } from '@stream-io/video-react-sdk'
 import React, { useEffect, useState } from 'react'
+import { Button } from './ui/button'
 
-const MeetingSetup = () => {
+const MeetingSetup = ( {setIsSetupComplete} : {setIsSetupComplete : (value:boolean)=>void}) => {
   const [isMicCamToggledOn, setisMicCamToggledOn] = useState(false)
 
   const call = useCall();
@@ -26,7 +27,7 @@ const MeetingSetup = () => {
       <h1 className=' text-white text-2xl font-bold'>Setup</h1>
       <VideoPreview />
       <div className="flex h-16 items-center justify-center gap-3">
-        <label className="flex items-center justify-center gap-2 font-medium">
+        <label className="flex items-center justify-center gap-2 font-medium text-white">
           <input
             type="checkbox"
             checked={isMicCamToggledOn}
@@ -35,7 +36,14 @@ const MeetingSetup = () => {
           Join with mic and camera off
         </label>
         <DeviceSettings />
+        
       </div>
+      <div>
+          <Button onClick={()=>{
+            call.join()
+            setIsSetupComplete(true)
+            }} className=' bg-green-500 px-6 py-6 text-lg font-semibold'>Join Meeting</Button>
+        </div>
     </div>
   )
 }
