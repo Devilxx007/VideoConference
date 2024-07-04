@@ -26,7 +26,7 @@ const MeetingSetup = ( {setIsSetupComplete} : {setIsSetupComplete : (value:boole
     <div className=' flex flex-col h-screen w-full gap-3 items-center justify-center'>
       <h1 className=' text-white text-2xl font-bold'>Setup</h1>
       <VideoPreview />
-      <div className="flex h-16 items-center justify-center gap-3">
+      <div className="flex flex-row h-16 items-center justify-center gap-3">
         <label className="flex items-center justify-center gap-2 font-medium text-white">
           <input
             type="checkbox"
@@ -35,8 +35,7 @@ const MeetingSetup = ( {setIsSetupComplete} : {setIsSetupComplete : (value:boole
           />
           Join with mic and camera off
         </label>
-        <DeviceSettings />
-        
+        <DeviceSettings/>
       </div>
       <div>
           <Button onClick={()=>{
