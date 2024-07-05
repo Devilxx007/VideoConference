@@ -37,13 +37,14 @@ const MeetingCards = () => {
 
       if (!call) throw new Error("Failed to call");
 
+      
       const startsAt =
-        values.datetime.toISOString() || new Date(Date.now()).toISOString;
+        values.datetime.toISOString() || new Date(Date.now()).toISOString() ;
       const description = values.description || "Instant Meeting";
 
       await call.getOrCreate({
         data: {
-          starts_at: startsAt,
+          starts_at: startsAt ,
           custom: {
             description,
           },

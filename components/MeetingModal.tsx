@@ -18,7 +18,7 @@ interface props{
   children?:ReactNode;
   handleClick?:()=>void;
   image?:string;
-  buttonIcon:string;
+  buttonIcon?:string;
 }
 const MeetingModal = ({title,buttontext,isOpen,onClose,children,handleClick,image,buttonIcon}:props) => {
   return (
