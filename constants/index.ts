@@ -27,3 +27,11 @@ const sideBarLinks = [
 ]
 
 export default sideBarLinks
+
+export const avatarImages = [
+    '/avatar-1.jpeg',
+    '/avatar-2.jpeg',
+    '/avatar-3.png',
+    '/avatar-4.png',
+    '/avatar-5.png',
+  ];
